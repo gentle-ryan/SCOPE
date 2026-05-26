@@ -4,7 +4,7 @@
 
 SCOPE is an automated pipeline that takes a PDF describing an AI system and produces a structured ethics impact assessment. It extracts the system's operational workflows, generates failure events per entity, simulates multi-stakeholder scenarios, and maps outcomes to Korea's 10-principle AI ethics framework — outputting structured JSON at every stage.
 
-> **Live demo:** [anonymous]
+> **Live demo:** [http://34.61.122.114:3001/](http://34.61.122.114:3001/)
 
 ---
 
