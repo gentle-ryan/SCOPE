@@ -4,7 +4,7 @@
 
 SCOPE is an automated pipeline that takes a PDF describing an AI system and produces a structured ethics impact assessment. It extracts the system's operational workflows, generates failure events per entity, simulates multi-stakeholder scenarios, and maps outcomes to Korea's 10-principle AI ethics framework — outputting structured JSON at every stage.
 
-> **Live demo:** [scope.snu.ac.kr](https://scope.snu.ac.kr)
+> **Live demo:** [anonymous]
 
 ---
 
@@ -38,8 +38,8 @@ Each stage checkpoints to disk — if a run is interrupted, re-running resumes f
 **Requirements:** Python 3.11+, a [Gemini API key](https://aistudio.google.com/)
 
 ```bash
-git clone https://github.com/gentle-ryan/scope.git
-cd scope
+git clone https://anonymous.4open.science/r/SCOPE
+cd SCOPE
 
 python -m venv .venv
 source .venv/bin/activate      # Windows: .venv\Scripts\activate
