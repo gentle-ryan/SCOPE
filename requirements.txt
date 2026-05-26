@@ -1,0 +1,8 @@
+langgraph
+google-genai
+pymupdf
+pymupdf4llm
+python-dotenv
+chromadb
+pydantic
+numpy
