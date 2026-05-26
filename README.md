@@ -45,9 +45,12 @@ python -m venv .venv
 source .venv/bin/activate      # Windows: .venv\Scripts\activate
 
 pip install -r requirements.txt
+```
 
-cp .env.example .env
-# Edit .env: set GEMINI_API_KEY=...
+Create a `.env` file in the project root with your API key:
+
+```
+GEMINI_API_KEY=your-gemini-api-key
 ```
 
 ---
@@ -55,11 +58,11 @@ cp .env.example .env
 ## Usage
 
 ```bash
-# Run full pipeline (Korean output)
+# Run full pipeline (English output, default)
 python run.py path/to/document.pdf
 
-# Run full pipeline (English output)
-python run.py path/to/document.pdf --lang en
+# Run full pipeline (Korean output)
+python run.py path/to/document.pdf --lang ko
 
 # Resume an interrupted run
 python run.py --resume <run_id>
@@ -124,16 +127,20 @@ python export_markdown.py outputs/<run_id>/impact_report.json -o report.md
 }
 ```
 
-10 ethics codes are assessed: Human Rights, Privacy, Diversity, Non-maleficence, Public Good, Solidarity, Data Governance, Accountability, User Safety, Transparency.
+10 ethics codes are assessed:
 
----
-
-## Tech stack
-
-- **Orchestration**: [LangGraph](https://github.com/langchain-ai/langgraph) `StateGraph`
-- **LLM**: Google Gemini via `google-genai` SDK
-- **PDF parsing**: `pymupdf4llm` + Gemini vision for scanned pages
-- **Vector store**: ChromaDB with `gemini-embedding-001`
+| Code | Principle | Description |
+|---|---|---|
+| 1 | Human Rights | Uphold fundamental human rights and dignity in AI design and use. |
+| 2 | Privacy | Protect personal data and respect individuals' right to privacy. |
+| 3 | Diversity | Prevent discrimination and ensure fairness across groups. |
+| 4 | Non-maleficence | Avoid causing harm to individuals or society through AI actions. |
+| 5 | Public Good | Promote collective societal welfare beyond individual interests. |
+| 6 | Solidarity | Support equitable participation and benefit sharing among communities. |
+| 7 | Data Management | Ensure proper collection, supervision, quality control, and purpose-limited use of data. |
+| 8 | Accountability | Clearly define roles and responsibilities throughout AI development and deployment. |
+| 9 | Safety | Prevent risks and ensure safe operation throughout the AI lifecycle. |
+| 10 | Transparency | Provide explainability and inform users regarding AI capabilities and risks. |
 
 ---
 

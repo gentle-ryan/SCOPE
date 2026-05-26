@@ -7,8 +7,8 @@ to outputs/<run_id>/.
 
 Usage:
     python run.py path/to/document.pdf
-    python run.py path/to/document.pdf --lang en
-    python run.py path/to/document.pdf --lang ko --run-id my-run
+    python run.py path/to/document.pdf --lang ko
+    python run.py path/to/document.pdf --run-id my-run
 
     # Resume or re-run a specific step (each step checkpoints to disk):
     python run.py --resume <run_id>
@@ -103,8 +103,8 @@ def main():
     )
     parser.add_argument("pdf", nargs="?", help="Path to the PDF document to analyze")
     parser.add_argument(
-        "--lang", choices=["ko", "en"], default="ko",
-        help="Output language: 'ko' (Korean) or 'en' (English). Default: ko",
+        "--lang", choices=["en", "ko"], default="en",
+        help="Output language: 'en' (English) or 'ko' (Korean). Default: en",
     )
     parser.add_argument("--run-id", default="", help="Custom run ID (auto-generated if omitted)")
     parser.add_argument("--resume", metavar="RUN_ID", help="Resume an existing run")
